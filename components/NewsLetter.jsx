@@ -1,27 +1,54 @@
 import React from "react";
 
-const NewsLetter = () => {
+export default function NewsLetter() {
   return (
-    <div className="flex flex-col items-center justify-center text-center space-y-2 pt-8 pb-14">
-      <h1 className="md:text-4xl text-2xl font-medium">
-        Subscribe now & get 20% off
-      </h1>
-      <p className="md:text-base text-gray-500/80 pb-8">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
-      <div className="flex items-center justify-between max-w-2xl w-full md:h-14 h-12">
-        <input
-          className="border border-gray-500/30 rounded-md h-full border-r-0 outline-none w-full rounded-r-none px-3 text-gray-500"
-          type="text"
-          placeholder="Enter your email id"
-        />
-        <button className="md:px-12 px-8 h-full text-white bg-orange-600 rounded-md rounded-l-none">
-          Subscribe
-        </button>
+    <div className="max-w-6xl mx-auto px-6 py-12" id="contact">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        {/* Info Section */}
+        <div>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Contact Us</h2>
+          <p className="text-slate-600 mb-6">
+            We’d love to hear from you! Whether you have a question about products, orders, or partnerships, our team is
+            ready to help. Send us a message and we’ll get back shortly.
+          </p>
+
+          <ul className="space-y-3 text-slate-700">
+            <li><strong>Email:</strong> sharddha@gmail.com</li>
+            <li><strong>Phone:</strong> +91-9876543210 </li>
+            <li><strong>Address:</strong> Distributed across global partners</li>
+          </ul>
+        </div>
+
+        {/* Contact Form */}
+        <div>
+          <form className="bg-white rounded-2xl shadow p-6 space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Email</label>
+              <input
+                type="email"
+                placeholder="Your email"
+                className="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Message</label>
+              <textarea
+                placeholder="Write your message..."
+                rows={4}
+                className="w-full p-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-orange-500 text-white font-medium py-3 rounded-lg shadow hover:bg-orange-600"
+            >
+              Send
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
-};
-
-export default NewsLetter;
+}
